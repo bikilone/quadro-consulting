@@ -1,8 +1,10 @@
 $secondary-color: #a0a0a0;
 
 .post {
-  margin-top: 65px;
+  margin-top: 120px;
   background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
   .post-header {
     display: flex;
     justify-content: flex-end;
@@ -42,12 +44,47 @@ $secondary-color: #a0a0a0;
         padding-right: 10px;
       }
     }
+    .main-text {
+      margin-bottom: 50px;
+    }
     .special {
       border-left: 1px solid hsl(0, 0%, 91%);
       color: $secondary-color;
       padding-left: 10px;
       display: block;
       margin: 10px 0;
+      font-size: 20px;
+    }
+    .disqusion {
+      max-width: 600px;
+      margin: auto;
+      margin-top: 50px;
+
+      .comments {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        span {
+          border-bottom: 1px solid #ebeef0;
+          color: #9aaab1;
+          width: 50%;
+          padding-bottom: 5px;
+          cursor: pointer;
+          &:first-child {
+            border-bottom: solid 3px #5c6bc0;
+            font-weight: bold;
+          }
+        }
+      }
+      input {
+        margin-top: 40px;
+        border: none;
+        border-bottom: 1px solid #000;
+        outline: none;
+        margin-bottom: 50px;
+        width: 100%;
+      }
     }
   }
 }

@@ -2,6 +2,19 @@ import React from "react";
 import "./Post.scss";
 
 export default function Post() {
+  const onClick = event => {
+    event.target.style.borderBottom = "solid 3px #5c6bc0";
+    event.target.style.fontWeight = "bold";
+    if (event.target.parentNode.children[1] !== event.target) {
+      event.target.parentNode.children[1].style.borderBottom =
+        "solid 1px black";
+      event.target.parentNode.children[1].style.fontWeight = "normal";
+    } else {
+      event.target.parentNode.children[0].style.borderBottom =
+        "solid 1px black";
+      event.target.parentNode.children[0].style.fontWeight = "normal";
+    }
+  };
   return (
     <div className="post">
       <div className="post-header">
@@ -66,7 +79,14 @@ export default function Post() {
           convallis faucibus nibh, quis consectetur sapien feugiat eget. Sed sed
           eleifend magna.
         </p>
-        <div className="social" />
+        <hr />
+        <div className="disqusion">
+          <div className="comments">
+            <span onClick={onClick}>0 comments</span>
+            <span onClick={onClick}>pixelBuddha</span>
+          </div>
+          <input placeholder="Add a comment..." />
+        </div>
       </div>
     </div>
   );

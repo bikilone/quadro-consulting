@@ -1,6 +1,6 @@
 @font-face {
   font-family: myFont;
-  src: url(./assets/font/font.rtf);
+  src: url(./font/font.rtf) format("rtf");
 }
 
 body {

@@ -15,9 +15,29 @@ export default class Header extends Component {
   render() {
     const { displayMenu } = this.state;
     const { onClick } = this;
+    const { hide, initial } = this.props;
+    let style = {
+      position: "fixed",
+      top: 0,
+      width: "100%"
+    };
+    if (hide) {
+      style = {
+        ...style,
+        transform: "translate(0,-500px)",
+        transitionDuration: "0.5s"
+      };
+    } else {
+      style = {
+        ...style,
+        transform: "translate(0,0)",
+        transitionDuration: "0.5s"
+      };
+    }
 
     return (
-      <div className="header">
+      // <Slide when={!hide} top>
+      <div className="header" style={style}>
         <h1 className="h1-header">Palo Alto</h1>
         <div className="menu">
           <Slide when={displayMenu} right>
@@ -36,10 +56,11 @@ export default class Header extends Component {
             <li>ABOUT</li>
             <li>ARCHIVE</li>
             <li>CONTACT</li>
-            <i class="fas fa-search" />
+            <i className="fas fa-search" />
           </ul>
         </div>
       </div>
+      // </Slide>
     );
   }
 }
