@@ -8,9 +8,7 @@ $color: #5c6bc0;
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100vw;
+
   overflow: hidden;
   .h1-header {
     font-style: italic;
@@ -34,9 +32,11 @@ $color: #5c6bc0;
       align-items: center;
       font-size: 20px;
       li {
+        background: $color;
         width: 110px;
-        border: 1px solid black;
+        // border: 1px solid;
         padding: 5px;
+        color: white;
       }
     }
   }
