@@ -14,7 +14,7 @@ export default function Post() {
           the people.
         </h1>
 
-        <img src="https://via.placeholder.com/200x300" />
+        <img src="https://via.placeholder.com/200x300" alt="" />
         <p className="main-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id
           risus vitae felis blandit iaculis. Pellentesque at porttitor eros.
