@@ -3,6 +3,8 @@ import Header from "../../components/Header/Header";
 import Post from "../../components/Post/Post";
 import Footer from "../../components/Footer/Footer";
 import "./App.scss";
+import { Switch, Route } from "react-router-dom";
+import Posts from "../Posts/Posts";
 
 class App extends Component {
   state = {
@@ -11,8 +13,6 @@ class App extends Component {
   };
   componentDidMount() {
     window.addEventListener("scroll", e => {
-      const isTop = window.scrollY;
-
       if (this.state.prevScroll < window.scrollY) {
         // moving down
         // hide navbar
@@ -33,7 +33,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header hide={this.state.hide} />
-        <Post />
+        <Switch>
+          <Route exact path="/" component={Post} />
+          <Route exact path="/index" component={Posts} />
+        </Switch>
         <Footer />
       </div>
     );

@@ -1,8 +1,9 @@
 import React from "react";
 import "./Post.scss";
 
-export default function Post() {
+export default function Post(props) {
   const onClick = event => {
+    // changing color of comment and team name
     event.target.style.borderBottom = "solid 3px #5c6bc0";
     event.target.style.fontWeight = "bold";
     if (event.target.parentNode.children[1] !== event.target) {
@@ -15,6 +16,7 @@ export default function Post() {
       event.target.parentNode.children[0].style.fontWeight = "normal";
     }
   };
+
   return (
     <div className="post">
       <div className="post-header">

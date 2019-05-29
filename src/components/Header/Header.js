@@ -15,7 +15,7 @@ export default class Header extends Component {
   render() {
     const { displayMenu } = this.state;
     const { onClick } = this;
-    const { hide, initial } = this.props;
+    const { hide } = this.props;
     let style = {
       position: "fixed",
       top: 0,

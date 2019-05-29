@@ -1,0 +1,19 @@
+.bottom-section {
+  display: flex;
+  justify-content: flex-end;
+  .read-more {
+    a {
+      background-color: #5c6bc0;
+      color: white;
+      height: 35px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

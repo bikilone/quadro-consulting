@@ -39,6 +39,10 @@ $color: #5c6bc0;
         text-align: center;
         padding: 5px;
         color: white;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid white;
+        }
       }
     }
   }
