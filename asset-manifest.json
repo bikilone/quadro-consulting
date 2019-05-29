@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/quadro-consulting/static/css/main.a6a43828.chunk.css",
-    "main.js": "/quadro-consulting/static/js/main.a4066a0e.chunk.js",
-    "main.js.map": "/quadro-consulting/static/js/main.a4066a0e.chunk.js.map",
+    "main.js": "/quadro-consulting/static/js/main.83761877.chunk.js",
+    "main.js.map": "/quadro-consulting/static/js/main.83761877.chunk.js.map",
     "runtime~main.js": "/quadro-consulting/static/js/runtime~main.d5a9a220.js",
     "runtime~main.js.map": "/quadro-consulting/static/js/runtime~main.d5a9a220.js.map",
     "static/css/2.5d832d7a.chunk.css": "/quadro-consulting/static/css/2.5d832d7a.chunk.css",
     "static/js/2.93afde47.chunk.js": "/quadro-consulting/static/js/2.93afde47.chunk.js",
     "static/js/2.93afde47.chunk.js.map": "/quadro-consulting/static/js/2.93afde47.chunk.js.map",
     "index.html": "/quadro-consulting/index.html",
-    "precache-manifest.58f40679d64ee7bd608b50168627e5fb.js": "/quadro-consulting/precache-manifest.58f40679d64ee7bd608b50168627e5fb.js",
+    "precache-manifest.f2b8187f1d31fcc08ec763787ccf4a5a.js": "/quadro-consulting/precache-manifest.f2b8187f1d31fcc08ec763787ccf4a5a.js",
     "service-worker.js": "/quadro-consulting/service-worker.js",
     "static/css/2.5d832d7a.chunk.css.map": "/quadro-consulting/static/css/2.5d832d7a.chunk.css.map",
     "static/css/main.a6a43828.chunk.css.map": "/quadro-consulting/static/css/main.a6a43828.chunk.css.map",

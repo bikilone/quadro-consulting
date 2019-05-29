@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee2728a468b0743616fe696274d18bcd",
+    "revision": "92e90215664b0ed33f9cd242d8a15517",
     "url": "/quadro-consulting/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/quadro-consulting/static/css/2.5d832d7a.chunk.css"
   },
   {
-    "revision": "1b41c4bc70c3e48d4577",
+    "revision": "2516036724fde1129185",
     "url": "/quadro-consulting/static/css/main.a6a43828.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/quadro-consulting/static/js/2.93afde47.chunk.js"
   },
   {
-    "revision": "1b41c4bc70c3e48d4577",
-    "url": "/quadro-consulting/static/js/main.a4066a0e.chunk.js"
+    "revision": "2516036724fde1129185",
+    "url": "/quadro-consulting/static/js/main.83761877.chunk.js"
   },
   {
     "revision": "201aca054cff1b8a9470",

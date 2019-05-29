@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/quadro-consulting/precache-manifest.58f40679d64ee7bd608b50168627e5fb.js"
+  "/quadro-consulting/precache-manifest.f2b8187f1d31fcc08ec763787ccf4a5a.js"
 );
 
 self.addEventListener('message', (event) => {
