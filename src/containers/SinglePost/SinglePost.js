@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import Loader from "react-loader-spinner";
+import { fetchSinglePost } from "../../services/dataService";
 
 export default class SinglePost extends Component {
   state = {
     data: {}
   };
   componentDidMount() {
+    window.scrollTo(0, 0);
     const id = this.props.match.params.id;
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then(res => res.json())
+    fetchSinglePost(id)
       .then(res =>
         this.setState({
           data: res
         })
-      );
+      )
+      .catch(error => {
+        throw new Error(error);
+      });
   }
   render() {
     const { body, title } = this.state.data;
@@ -46,6 +50,7 @@ export default class SinglePost extends Component {
         <span className="date">Sep 11</span>
         <div className="post-main">
           <h1>{title}</h1>
+
           <p className="main-text">{body}</p>
           <hr />
           <div className="disqusion">

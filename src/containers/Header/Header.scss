@@ -1,4 +1,4 @@
-$width: 1000px;
+$width: 1440px;
 $color: #5c6bc0;
 
 .header {
@@ -74,6 +74,11 @@ $color: #5c6bc0;
       list-style: none;
       width: 50vw;
       align-items: center;
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
     }
     @media screen and (min-width: $width) {
       display: block;

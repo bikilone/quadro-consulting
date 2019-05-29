@@ -1,11 +1,6 @@
-@font-face {
-  font-family: myFont;
-  src: url(./font/font.rtf) format("rtf");
-}
-
 body {
   margin: 0;
-  font-family: myFont;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f7f9fc;

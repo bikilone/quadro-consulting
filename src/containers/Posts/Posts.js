@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FetchedPost from "../../components/FetchedPost/FetchedPost";
 import Loader from "react-loader-spinner";
+import { fetchMultiplePosts } from "../../services/dataService";
 
 export default class Posts extends Component {
   state = {
@@ -9,10 +10,11 @@ export default class Posts extends Component {
   };
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then(res => res.json())
+    fetchMultiplePosts()
       .then(res => this.setState({ posts: res.slice(0, 10), loading: false }))
-      .catch();
+      .catch(error => {
+        throw new Error(error);
+      });
   }
   render() {
     const { posts, loading } = this.state;

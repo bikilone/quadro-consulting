@@ -15,6 +15,7 @@ export default class Header extends Component {
   };
   dropDown = () => {
     this.setState(prevState => ({
+      // toggling dropdown
       showDropDown: !prevState.showDropDown
     }));
   };
@@ -30,6 +31,7 @@ export default class Header extends Component {
       width: "100%"
     };
     if (hide) {
+      // making header sticky with animation
       style = {
         ...style,
         transform: "translate(0,-500px)",
@@ -69,8 +71,9 @@ export default class Header extends Component {
         <i className="fas fa-bars hamburger" onClick={onClick} />
         <div className="horizontal-menu">
           <ul>
-            <li>HOME</li>
-
+            <li>
+              <Link to="/">HOME</Link>
+            </li>
             <li>ABOUT</li>
             <li>ARCHIVE</li>
             <li>CONTACT</li>

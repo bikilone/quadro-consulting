@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import Header from "../../components/Header/Header";
+import Header from "../Header/Header";
 import Post from "../../components/Post/Post";
 import Footer from "../../components/Footer/Footer";
 import "./App.scss";
 import { Switch, Route } from "react-router-dom";
 import Posts from "../Posts/Posts";
-import SinglePost from "../../components/SinglePost/SinglePost";
+import SinglePost from "../SinglePost/SinglePost";
+import ErrorBoundary from "../ErrorBoundary/ErrorBoudnary";
 
 class App extends Component {
   state = {
@@ -34,11 +35,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header hide={this.state.hide} />
-        <Switch>
-          <Route exact path="/" component={Post} />
-          <Route exact path="/index" component={Posts} />
-          <Route exact path="/:id" component={SinglePost} />
-        </Switch>
+        <ErrorBoundary>
+          <Switch>
+            <Route exact path="/" component={Post} />
+            <Route exact path="/index" component={Posts} />
+            <Route exact path="/:id" component={SinglePost} />
+          </Switch>
+        </ErrorBoundary>
         <Footer />
       </div>
     );
