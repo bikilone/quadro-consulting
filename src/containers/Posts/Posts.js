@@ -11,7 +11,7 @@ export default class Posts extends Component {
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then(res => res.json())
-      .then(res => this.setState({ posts: res, loading: false }))
+      .then(res => this.setState({ posts: res.slice(0, 10), loading: false }))
       .catch();
   }
   render() {

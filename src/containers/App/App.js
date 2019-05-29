@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import "./App.scss";
 import { Switch, Route } from "react-router-dom";
 import Posts from "../Posts/Posts";
+import SinglePost from "../../components/SinglePost/SinglePost";
 
 class App extends Component {
   state = {
@@ -36,6 +37,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Post} />
           <Route exact path="/index" component={Posts} />
+          <Route exact path="/:id" component={SinglePost} />
         </Switch>
         <Footer />
       </div>

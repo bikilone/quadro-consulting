@@ -1,21 +1,29 @@
 import React, { Component } from "react";
 import "./Header.scss";
 import Slide from "react-reveal/Slide";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   state = {
-    displayMenu: false
+    displayMenu: false,
+    showDropDown: false
   };
   onClick = () => {
     this.setState(prevState => ({
       displayMenu: !prevState.displayMenu
     }));
   };
+  dropDown = () => {
+    this.setState(prevState => ({
+      showDropDown: !prevState.showDropDown
+    }));
+  };
 
   render() {
-    const { displayMenu } = this.state;
-    const { onClick } = this;
+    const { displayMenu, showDropDown } = this.state;
+    const { onClick, dropDown } = this;
     const { hide } = this.props;
+    const classDropDown = showDropDown ? "show" : "hide";
     let style = {
       position: "fixed",
       top: 0,
@@ -42,7 +50,16 @@ export default class Header extends Component {
         <div className="menu">
           <Slide when={displayMenu} right>
             <ul>
-              <li>HOME</li>
+              <li>
+                HOME
+                <div className="triangle" onClick={dropDown} />
+              </li>
+              <li className={classDropDown}>
+                <Link to="/">OLD POSTS</Link>
+              </li>
+              <li className={classDropDown}>
+                <Link to="/index">NEWEST POSTS</Link>
+              </li>
               <li>ABOUT</li>
               <li>ARCHIVE</li>
               <li>CONTACT</li>
@@ -53,6 +70,7 @@ export default class Header extends Component {
         <div className="horizontal-menu">
           <ul>
             <li>HOME</li>
+
             <li>ABOUT</li>
             <li>ARCHIVE</li>
             <li>CONTACT</li>

@@ -3,7 +3,7 @@ import "./FetchedPost.scss";
 import { Link } from "react-router-dom";
 
 export default function FetchedPost(props) {
-  const { title, body } = props.data;
+  const { title, body, id } = props.data;
   return (
     <div>
       <div className="post">
@@ -17,7 +17,7 @@ export default function FetchedPost(props) {
         </div>
         <div className="bottom-section">
           <div className="read-more">
-            <Link to="/">Read More</Link>
+            <Link to={`/${id}`}>Read More</Link>
           </div>
         </div>
       </div>
